@@ -1,0 +1,70 @@
+<ion-app>
+   <ion-menu  side="start" menuId="first" contentId="menu">
+     <ion-header>
+       <ion-toolbar color="primary">
+         <ion-title>Menu</ion-title>
+       </ion-toolbar>
+     </ion-header>
+     <ion-content>
+       <ion-list>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="home"> Home
+            <ion-icon slot="start" name="home-outline"></ion-icon>
+          </ion-item>
+         </ion-menu-toggle> 
+
+        <ion-menu-toggle>
+         <ion-item routerLink="editar"> Editar Lista de Sugestões
+           <ion-icon slot="start" name="document-text-outline"></ion-icon>
+         </ion-item>
+        </ion-menu-toggle> 
+
+        <ion-menu-toggle>
+          <ion-item routerLink="solicitar"> Solicitar Emissão de NITES 
+            <ion-icon slot="start" name="cash-outline"></ion-icon>
+          </ion-item>
+         </ion-menu-toggle> 
+
+         <ion-menu-toggle>
+          <ion-item routerLink="debito">Informar Débito
+            <ion-icon slot="start" name="megaphone-outline"></ion-icon>
+          </ion-item>
+         </ion-menu-toggle> 
+
+         <ion-menu-toggle>
+          <ion-item routerLink="carteira">Ajustar Carteira
+            <ion-icon slot="start" name="wallet-outline"></ion-icon>
+          </ion-item>
+         </ion-menu-toggle> 
+
+         <ion-menu-toggle>
+          <ion-item routerLink="extrato">Visualizar Extrato
+            <ion-icon slot="start" name="receipt-outline"></ion-icon>
+          </ion-item>
+         </ion-menu-toggle>
+
+         
+
+
+         <ion-menu-toggle auto-hide="false">
+          <ion-list lines="none">
+            <ion-item menuclose [hidden]="" [routerLink]="['/editar']"
+              [queryParams]="{ type: 'birthday' }" menuClose class="sub-menu">
+              <ion-icon name="carteira" slot="start"></ion-icon>
+              Birthdays
+            </ion-item>
+          </ion-list>
+        </ion-menu-toggle>
+     
+
+
+
+
+
+       </ion-list>
+     </ion-content>
+   </ion-menu>  
+<ion-router-outlet id="menu" main></ion-router-outlet>
+ 
+</ion-app>
